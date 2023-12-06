@@ -1,0 +1,88 @@
+.layout {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon_menu_item__icon {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.priority-select {
+  width: 100%;
+}
+
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.table th,
+.table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: left;
+}
+
+
+.task-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+
+.task-area {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus a {
+  font-size: 16px;
+  color: #ee82aa;
+  text-decoration: none;
+  border-bottom: none;
+}
+.plussss{
+  color: #ee82aa;
+}
+
+
+.task-btn {
+  background-color: rgb(132, 176, 246);
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 20%;
+  margin: 0 0.5rem;
+}
+.small-font {
+  margin-top: 65px;
+  font-size: 16px;
+  color: #ee82aa;
+}
+
