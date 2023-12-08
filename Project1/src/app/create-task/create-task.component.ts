@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import { ChangeDetectorRef } from '@angular/core';
 
 export interface TaskItem {
   id: number;
@@ -21,9 +22,9 @@ export class CreateTaskComponent {
   public taskList: TaskItem[] = [];
   public taskPriorityList: string[] = ['high', 'low', 'medium '];
   public editData: TaskItem | null = null;
-  newlyAddedTasks: TaskItem[] = [];
+  public newlyAddedTasks: TaskItem[] = [];
 
-  constructor(private FormBuilder: FormBuilder) {
+  constructor(private FormBuilder: FormBuilder,, private cdr: ChangeDetectorRef) {
     this.ListForm = this.createForm();
   }
 
@@ -69,12 +70,17 @@ export class CreateTaskComponent {
     });
   }
 
-  deleteTask(deleteTaskId: number): void {
+ deleteTask(deleteTaskId: number): void {
+    console.log('deleteTask function called with taskId:', deleteTaskId);
+
     const taskIndex = this.taskList.findIndex(item => item.id === deleteTaskId);
 
     if (taskIndex !== -1) {
       this.taskList.splice(taskIndex, 1);
+      this.cdr.detectChanges();
+      console.log('Updated taskList:', this.taskList);
     }
   }
+
 
 }
